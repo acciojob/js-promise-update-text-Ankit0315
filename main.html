@@ -10,17 +10,14 @@
     <div id="output"></div>
 
     <script type="text/javascript" src="./script.js">
-let myPromise = new Promise(function(myResolve, myReject) \
-	{
-  setTimeout(function() 
-			 {
-				 myResolve("Hellow,world!"); }, 1000);
-});
-function myFunction(value) {
-  document.getElementById("output").innerHTML = value;
+function func(){
+	return new Promise((resolve) => {
+	  setTimeout(() => { 
+		  resolve("Hello, world!");
+	  }, 1000);
+    });
 }
-					
-		
+func().then((value) => document.getElementById("output").innerText = value);
 	</script>
   </body>
 </html>
