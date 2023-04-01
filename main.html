@@ -9,6 +9,18 @@
     <!-- do not modify this file -->
     <div id="output"></div>
 
-    <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./script.js">
+let myPromise = new Promise(function(myResolve, myReject) \
+	{
+  setTimeout(function() 
+			 {
+				 myResolve("Hellow,world!"); }, 1000);
+});
+function myFunction(value) {
+  document.getElementById("output").innerHTML = value;
+}
+					
+		
+	</script>
   </body>
 </html>
